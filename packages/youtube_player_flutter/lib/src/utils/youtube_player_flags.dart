@@ -54,6 +54,11 @@ class YoutubePlayerFlags {
   /// Default is `en`.
   final String captionLanguage;
 
+  /// Sets the YouTube player interface language (hl). Useful for disabling captions
+  ///
+  /// Default is `en`.
+  final String interfaceLanguage;
+
   /// Forces High Definition video quality when possible
   ///
   /// Default is false.
@@ -90,6 +95,7 @@ class YoutubePlayerFlags {
     this.disableDragSeek = false,
     this.enableCaption = true,
     this.captionLanguage = 'en',
+    this.interfaceLanguage = 'en',
     this.loop = false,
     this.forceHD = false,
     this.startAt = 0,
@@ -111,6 +117,7 @@ class YoutubePlayerFlags {
     bool? enableCaption,
     bool? forceHD,
     String? captionLanguage,
+    String? interfaceLanguage,
     int? startAt,
     int? endAt,
     bool? controlsVisibleAtStart,
@@ -120,6 +127,7 @@ class YoutubePlayerFlags {
     return YoutubePlayerFlags(
       autoPlay: autoPlay ?? this.autoPlay,
       captionLanguage: captionLanguage ?? this.captionLanguage,
+      interfaceLanguage: interfaceLanguage ?? this.interfaceLanguage,
       disableDragSeek: disableDragSeek ?? this.disableDragSeek,
       enableCaption: enableCaption ?? this.enableCaption,
       hideControls: hideControls ?? this.hideControls,
